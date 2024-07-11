@@ -5,6 +5,7 @@ import userRouter from './routes/user.routes.js';
 import authRouter from './routes/auth.route.js';
 dotenv.config();
 
+//Mongodb connection
 mongoose.connect(process.env.MONGO).then(()=>{
     console.log('Connected to Mongodb');
 })
@@ -16,10 +17,13 @@ app.listen(3000, () => {
     console.log(' Server is running on port 3000');
 })
 
-
+//Test Route API
 app.use('/api/user',userRouter);
+//SignUp Route API
 app.use('/api/auth',authRouter);
 
+
+//Middleware
 app.use((err, req, res, next)=>{
     const statusCode = err.statusCode || 500;
     const message = err.message || 'Internal Server Error';
