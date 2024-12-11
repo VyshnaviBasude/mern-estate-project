@@ -4,6 +4,8 @@ Main Function Points
 Allows users to search for and view real estate properties
 Provides functionality for users to create, update, and delete their own property listings
 Integrates with a MongoDB database to store and retrieve property data
+
+
 Technology Stack
 MongoDB: A NoSQL database used to store property data
 Express.js: A web application framework for Node.js, used to build the backend API
